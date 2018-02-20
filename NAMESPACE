@@ -1,0 +1,9 @@
+importFrom("grDevices", "dev.off", "jpeg", "pdf", "png", "x11")
+importFrom("graphics", "abline", "axis", "legend", "mtext", "par",
+             "plot", "points")
+importFrom("stats", "ccf", "cor.test", "optimize", "sd")
+importFrom("utils", "write.table")
+importFrom("pracma", "detrend")
+importFrom("grDevices", "dev.new")
+exportPattern("^[[:alpha:]]+")
+
