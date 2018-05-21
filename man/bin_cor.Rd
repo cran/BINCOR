@@ -20,7 +20,6 @@ the unevenly spaced time series. Options (by default is 3): \cr
  If 1 then est_tau = tau_x + tau_y     [Eq. 7.44, Mudelsee (2010, 2014)]. \cr
  If 2 then est_tau = max(tau_x, tau_y) [Eq. 7.45, Mudelsee (2010, 2014)]. \cr
  If 3 then est_tau = dist_x_y/ln(a_x_y_est) [Eq. 7.48, Mudelsee (2010, 2014).] \cr
- If 4 then est_tau via Carlstein [Eq. 3.28, Mudelsee (2010, 2014)]. 
 }
   \item{ofilename}{
 The output filename (ASCII format) containing the binned time series.
@@ -41,24 +40,34 @@ in the directory \R of our BINCOR package.
 }
 
 \value{
-A list of 7 elements:
+A list of 16 elements:
  \item{Binned_time_series}{An object containing the binned time series.} 
  \item{Auto._cor._coef._ts1}{The autocorrelation for the binned time series number 1.}
  \item{Persistence_ts1}{The persistence or memory for the binned time series number 1.}
  \item{Auto._cor._coef._ts2}{The autocorrelation for the binned time series number 2.}
  \item{Persistence_ts2}{The persistence or memory for the binned time series number 2.}
- \item{Mean_persistence}{The new times obtained for the binned time series.} 
+ \item{bin width}{The bin width.} 
  \item{Number_of_bins}{The number of bins.}
+ \item{Average spacing}{The mean value of the times for the binned time series.}
+ \item{VAR. ts1}{Variance of ts1}
+ \item{VAR. bin ts1}{Variance of the binned ts1.} 
+ \item{VAR. ts2}{Variance for ts2.}
+ \item{VAR. bin ts2}{Variance of the binned ts2.}
+ \item{VAR. ts1 - VAR bints1}{Variance of ts1 minus variance of the binned ts1.}
+ \item{VAR. ts2 - VAR bints2}{Variance of ts2 minus variance of the binned ts2.}
+ \item{\% of VAR. lost ts1}{Percentage of variance lost for ts1.}
+ \item{\% of VAR. lost ts2}{Percentage of variance lost for ts2.}
 }
 \references{
 Bunn, A., Korpela, M., Biondi, F., Campelo, F., Mérian, P., Qeadan, F.,
 Zang, C., Buras, A., Cecile, J., Mudelsee, M., Schulz, M. (2015). 
 Dendrochronology Program Library in R. R package version 1.6.3.
-URL \url{https://CRAN.R-project.org/package=dplR} \cr 
+URL \url{https://CRAN.R-project.org/package=dplR}. \cr 
 
 Mudelsee, M. (2002). TAUEST: A computer program for estimating persistence 
 in unevenly spaced weather/climate time series. Computers & Geosciences 28 
 (1), 69--72. \cr
+URL \url{http://www.climate-risk-analysis.com/software/}. \cr
 
 Mudelsee, M. (2010). Climate Time Series Analysis: Classical Statistical and
 Bootstrap Methods. Springer. \cr
@@ -68,7 +77,7 @@ Bootstrap Methods, Second Edition. Springer. \cr
 
 Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
 M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced climate time series. Ms. submitted. 
+between two unevenly spaced time series. Ms. under review (second round).
 }
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr

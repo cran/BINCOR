@@ -29,7 +29,8 @@ Sánchez Goñi, M. F., Desprat, S., Daniau, A.L., Bassinot, F. C.,
 Polanco Martínez, J. M., Harrison, S. P., Allen, J. R., Anderson, R. S., Behling,
 H., Bonnefille, R., et al. (2017). The ACER pollen and charcoal database: a
 global resource to document vegetation and fire response to abrupt climate
-changes during the last glacial period. Earth System Science Data 9 (2), 679.
+changes during the last glacial period. Earth System Science Data 9 (2), 679. \cr
+URL \url{https://www.earth-syst-sci-data.net/9/679/2017/}. 
 }
 \keyword{dataset2}
 

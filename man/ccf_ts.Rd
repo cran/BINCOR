@@ -7,7 +7,7 @@
 The \code{\link{ccf_ts}} function estimates and plots the cross-correlation 
 between the binned time series. \code{\link{ccf_ts}} has an 
 option to remove the linear trend of the time series under analysis (other 
-pre-process methods could be used) and contains several parameters that are 
+pre-processing methods could be used) and contains several parameters that are 
 described in the following lines. 
 }
 \usage{
@@ -73,7 +73,7 @@ significance.
 \references{
 Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
 M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced climate time series. Ms. submitted. 
+between two unevenly spaced time series. Ms. under review (second round). 
 }
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr

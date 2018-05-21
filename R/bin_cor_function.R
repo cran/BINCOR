@@ -34,12 +34,11 @@ bin_cor <- function(ts1, ts2, FLAGTAU=3, ofilename) {
  #:: 1 tau_x + tau_y     [Eq. 7.44, Mudelsee (2010, 2014)]
  #:: 2 max(tau_x, tau_y) [Eq. 7.45, Mudelsee (2010, 2014)]
  #:: 3 dist_x_y/ln(a_x_y_est) [Eq. 7.48, Mudelsee (2010, 2014)]
- #:: 4 Carlstein 	 [Eq. 3.28, Mudelsee (2010, 2014)]
  #:: tau_x, tau_y are the persistence (memory) time for ts1 and ts2, 
  #:: respectively. 
  
  #:: Checking the input data
- if( dim(ts1)[2] !=2 | dim(ts2)[2] != 2) 
+ if(dim(ts1)[2] !=2 | dim(ts2)[2] != 2) 
   stop ("There is a problem with the dimension in your input data. 
    The input data should be a couple of vectors of dimension N x 2 
    (rows x columns). Thank you for using the BINCOR package. \n") 
@@ -111,30 +110,10 @@ bin_cor <- function(ts1, ts2, FLAGTAU=3, ofilename) {
   a_XY_est <- sqrt(a_X_est*a_Y_est)
   #:: Eq. 7.48 (Mudelsee 2010 & 2014)  
   taub     <- -dist_XY / log( a_XY_est ) 
-  cat("Hi!, option : taub <- -dist_XY / log(a_XY_est) [Eq. 7.47 & 7.48 (Mudelsee 2010 & 2014)] \n") 
+  cat("Hi!, option 3: taub <- -dist_XY / log(a_XY_est) [Eq. 7.47 & 7.48 (Mudelsee 2010 & 2014)] \n") 
  }
 
- if (FLAGTAU == 4) {  
-  #:: Carlstein (Eq. 3.28, Mudelsee (2010, 2014)) 
-  #:: Inspired from the mc-brxy.f90 code ((C) Manfred Mudelsee) 
-  SIXPOW <- 2.44949   # 6^(0.5)
-  DOSTER <- 0.6666667 # 2/3 
-  UNTER  <- 0.3333333 # 1/3 
-   
-  a_XY_est <- sqrt(a_X_est*a_Y_est)
-  dummy1   <- SIXPOW*a_XY_est
-  dummy2   <- 1 - a_XY_est*a_XY_est 
-  dummy3   <- (Nx^UNTER) * (dummy1/dummy2)^DOSTER 
-  dummy3   <- max(1, dummy3)
-  #:: Please, note that M. Mudelsee used Nm1 = Nx -1 assuming that Nx=Ny
-  #:: But, I suggest to use (a conservative approach) the min(Nx, Nx)  
-  Nm1      <- min(Nx, Ny) - 1 
-  dummy3   <- min(Nm1, dummy3) 
-  taub     <- dummy3*dist_XY
-  cat("Hi!, option 4: Carlstein (Eq. 3.28, Mudelsee (2010, 2014)) \n") 
- }
-
- #:: Inspired from the M. Mudelsee's code "mc-brxy.f90" 
+ #:: Inspired from the M. Mudelsee's code "mc-brxy.f90") 
  taub <- min(taub, (Tmax_m - Tmin_m)*0.5)  
  taub <- max(taub, (Tmax_m - Tmin_m)/(Nx - 1)) 
  
@@ -142,7 +121,7 @@ bin_cor <- function(ts1, ts2, FLAGTAU=3, ofilename) {
  remi <- (Tmax_m - Tmin_m) / taub
  Nb   <- round(remi) 
 
- cat("Testing the number of bins: taub=", taub," Nb=",Nb,"\n") 
+ cat("Testing the number of bins: taub=", taub," Nb=", Nb,"\n") 
  
  id1        <- rep(9999, Nb)  
  id2        <- rep(9999, Nb)  
@@ -183,14 +162,31 @@ bin_cor <- function(ts1, ts2, FLAGTAU=3, ofilename) {
  } 
 
  Datin    <- cbind(tau.t.mean, mean.ts1, mean.ts2) 
+ # mean.ts1 and mean.ts2 are the binned time series
+
+ #:: Computing some basic statistics 
+ id.noNA     <- which(tau.t.mean != "NA") 
+ avg.bin     <- round(mean(diff(tau.t.mean[id.noNA])), 2)
+ #avg.bin     <- mean(diff(na.omit(tau.t.mean))) 
+ VAR.ts1     <- round(cbind(var(ts1[,2]), var(na.omit(mean.ts1))), 2)
+ VAR.ts2     <- round(cbind(var(ts2[,2]), var(na.omit(mean.ts2))), 2)
+ chg.VARts1  <- round(VAR.ts1[1] - VAR.ts1[2], 2)
+ chg.VARts2  <- round(VAR.ts2[1] - VAR.ts2[2], 2)
+ per_chg.VARts1 <- round((chg.VARts1 / VAR.ts1[1])*100, 2)
+ per_chg.VARts2 <- round((chg.VARts2 / VAR.ts2[1])*100, 2)
+ 
 
  write.table(Datin, file=ofilename, col.names=F, row.names=F)
  
  names.ls <- c("Binned_time_series", "Auto._cor._coef._ts1", "Persistence_ts1", 
-	       "Auto._cor._coef._ts2", "Persistence_ts2", "Mean_persistence", 
-		"Number_of_bins")
+	       "Auto._cor._coef._ts2", "Persistence_ts2", "bin width", "Number_of_bins", 
+    	       "Average spacing", "VAR. ts1", "VAR. bin ts1", "VAR. ts2", "VAR. bin ts2", 
+               "VAR. ts1 - VAR bints1", "VAR. ts2 - VAR bints2", "% of VAR. lost ts1", 
+	       "% of VAR. lost ts2")
 
- LIST        <- list(Datin, a_X_est, tau_X_est, a_Y_est, tau_Y_est, taub, Nb)
+ LIST        <- list(Datin, a_X_est, tau_X_est, a_Y_est, tau_Y_est, taub, Nb,
+		    avg.bin, VAR.ts1[1], VAR.ts1[2], VAR.ts2[1], VAR.ts2[2], 
+		    chg.VARts1, chg.VARts2, per_chg.VARts1, per_chg.VARts2)
  names(LIST) <- names.ls 
   
  return(LIST) 

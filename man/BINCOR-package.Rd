@@ -2,27 +2,29 @@
 \alias{BINCOR-package}
 \alias{BINCOR}
 \docType{package}
-\title{Estimate the Correlation Between Two Irregular Climate Time Series
+\title{Estimate the Correlation Between Two Irregular Time Series
 }
 \description{
-'BINCOR' estimate the correlation between two irregular climate 
+'BINCOR' estimate the correlation between two irregular 
 time series that are not necessarily sampled on identical time points. 
 This program is also applicable to the situation of two evenly spaced 
 time series that are not on the same time grid. 'BINCOR' is based on 
 a novel estimation approach proposed by Mudelsee (2010, 2014) to 
-estimate the correlation between two time series with different 
-timescales. The outputs (plots) can be displayed in the screen 
-or can be saved as PNG, JPG or PDF formats. The 'BINCOR' package also 
-provides two examples with real data: instrumental (\code{\link{ENSO.dat}} 
-and \code{\link{NHSST.dat}} data sets) and paleoclimatic (\code{\link{ID31.dat}}
-and \code{\link{ID32.dat}} data sets) time series to exemplify its use. 
+estimate the correlation between two climate time series with different 
+timescales. The idea is that autocorrelation (AR1 process) allows to 
+correlate values obtained on different time points. The outputs (plots) 
+can be displayed in the screen or can be saved as PNG, JPG or PDF formats. 
+The 'BINCOR' package also provides two examples with real data: instrumental 
+(\code{\link{ENSO.dat}} and \code{\link{NHSST.dat}} data sets) and 
+paleoclimatic (\code{\link{ID31.dat}} and \code{\link{ID32.dat}} data sets) 
+time series to exemplify its use. 
 }
 \details{
 \tabular{ll}{
 Package: \tab BINCOR\cr
 Type: \tab Package\cr
-Version: \tab 0.1\cr
-Date: \tab 2017-12-07\cr
+Version: \tab 0.2\cr
+Date: \tab 2018-05-18\cr
 License: \tab GPL (>= 2) \cr
 LazyLoad: \tab yes\cr
 }
@@ -64,5 +66,5 @@ Bootstrap Methods, Second Edition. Springer. \cr
 
 Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
 M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced climate time series. Ms. submitted. \cr
+between two unevenly spaced time series. Ms. under review (second round). \cr
 }

@@ -9,7 +9,7 @@ binned time series. \code{\link{cor_ts}} estimates three types of correlation
 coefficients: Pearson’s correlation, Spearman’s and Kendall’s rank correlations
 by means of the \R native function cor.test (package:stats). The \code{\link{cor_ts}} 
 function has an option to remove the linear trend of the time series under analysis 
-(other pre-process methods could be used) and its parameters are 
+(other pre-processing methods could be used) and its parameters are 
 described in the following lines. 
 }
 \usage{
@@ -77,7 +77,7 @@ Bootstrap Methods, Second Edition. Springer. \cr
 
 Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
 M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced climate time series. Ms. submitted. 
+between two unevenly spaced time series. Ms. under review (second round). 
 }
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr

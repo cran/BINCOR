@@ -5,7 +5,7 @@
 }
 \description{
 The \code{\link{plot_ts}} function plot and compare the irregular 
-(irregular) and the binned time series. \code{\link{plot_ts}} has 
+and the binned time series. \code{\link{plot_ts}} has 
 several parameters that are described in the following lines. 
 }
 \usage{
@@ -33,13 +33,13 @@ both curves are in red).
 }
   \item{ltyts1, ltyts2}{
 ltyts[1][2] are the type of lines to be plotted for the irregular time series 
-(by default is 1, i.e., solid). 1 = solid, 2 = dashed, 3 = dotted, 4 = dot-dash, 
-5 = long-dash, 6 = double-dash. 
+(by default is 1, i.e., solid). 1 = solid, 2 = dashed, 3 = dotted, 4 = dot-dashed, 
+5 = long-dashed, 6 = double-dashed. 
 }
   \item{ltybints1, ltybints2}{
 ltybints[1][2] are the type of lines to be plotted for the binned time series
-(by default is 2, i.e., dashed).  1 = solid, 2 = dashed, 3 = dotted, 4 = dot-dash, 
-5 = long-dash, 6 = double-dash.
+(by default is 2, i.e., dashed).  1 = solid, 2 = dashed, 3 = dotted, 4 = dot-dashed, 
+5 = long-dashed, 6 = double-dashed.
 }
   \item{device}{
 The type of the output device (by default the option is ``screen'', 
@@ -80,7 +80,7 @@ Output plot: \emph{screen or 'ofilename + .png, .jpg or .pdf'}.
 \references{
  Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
 M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced climate time series. Ms. submitted.
+between two unevenly spaced series. Ms. under review (second round). 
 }
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr
