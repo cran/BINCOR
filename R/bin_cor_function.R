@@ -3,7 +3,7 @@
 #:: Programmed by Josué M. Polanco-Martinez a.k.a jomopo             #
 #:: Email: josue.m.polanco@gmail.com                                 #
 ######################################################################
-#   Copyright (C) 2017 by Josué M. Polanco-Martínez 	             #
+#   Copyright (C) 2017-2026 by Josué M. Polanco-Martínez 	             #
 #   This file/code is part of the R package BINCOR 	             #
 ######################################################################
 #								     
@@ -176,7 +176,8 @@ bin_cor <- function(ts1, ts2, FLAGTAU=3, ofilename) {
  per_chg.VARts2 <- round((chg.VARts2 / VAR.ts2[1])*100, 2)
  
 
- write.table(Datin, file=ofilename, col.names=F, row.names=F)
+ outfile <- file.path(tempdir(), ofilename)
+ write.table(Datin, file=outfile, col.names=F, row.names=F)
  
  names.ls <- c("Binned_time_series", "Auto._cor._coef._ts1", "Persistence_ts1", 
 	       "Auto._cor._coef._ts2", "Persistence_ts2", "bin width", "Number_of_bins", 

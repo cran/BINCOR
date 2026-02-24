@@ -77,22 +77,23 @@ Output:
 
 Output plot: \emph{screen or 'ofilename + .png, .jpg or .pdf'}. 
 }
-\references{
- Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
-M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced series. Ms. under review (second round). 
-}
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr
-BC3 - Basque Centre for Climate Change, Bilbao, SPAIN.\cr 
-EPOC UMR CNRS 5805 - U. de Bordeaux, Pessac, FRANCE.\cr
+Dept. of Statistics, Fac. of Sciences, Unversity of Salamanca, SPAIN.\cr 
 Web1: \url{https://scholar.google.es/citations?user=8djLIhcAAAAJ&hl=en}.\cr
-Web2: \url{http://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
-Email: \url{josue.m.polanco@gmail.com} \cr
+Web2: \url{https://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
+Email: \email{josue.m.polanco@gmail.com} \cr
+}
+\references{
+\strong{Polanco-Martínez, J.M.}, Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
+M. Mudelsee. (2019). BINCOR: an R package to estimate the correlation 
+between two unevenly spaced time series. \emph{R Journal}, \strong{11(1)}, 
+170-184, <URL: \doi{doi:10.32614/RJ-2019-035}>.
 }
 \examples{
+\donttest{
  #####################################################################
- #::  Figure 1 (Polanco-Martínez et al. (2018), (mimeo)). 
+ #::  Figure 1 (Polanco-Martínez et al. (2019) (mimeo)). 
  #####################################################################
  library("BINCOR") 
 
@@ -126,7 +127,7 @@ Email: \url{josue.m.polanco@gmail.com} \cr
   Hfig=900, Wfig=1200, resfig=150, ofilename="plot_ts_RAW_BIN_enso_sst") 
 
  #####################################################################
- #::  Figure 4 (Polanco-Martínez et al. (2017), (mimeo)). 
+ #::  Figure 4 (Polanco-Martínez et al. (2019) (mimeo)). 
  #####################################################################
 
  #####################################################################
@@ -162,6 +163,7 @@ Email: \url{josue.m.polanco@gmail.com} \cr
  plot_ts(ID31.dat, ID32.dat, bin_ts1, bin_ts2, "MD04-2845 (Temp. forest)", 
   "MD95-2039 (Temp. forest )", colts1=1, colts2=2, colbints1=3, colbints2=4, 
   device="png",  Hfig=900, Wfig=1200, resfig=150, ofilename="ts_ACER_ABRUPT") 
+}
 }
 \keyword{plot}
 \keyword{plot time series}

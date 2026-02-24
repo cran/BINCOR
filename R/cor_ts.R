@@ -3,7 +3,7 @@
 #:: Programmed by Josué M. Polanco-Martinez a.k.a jomopo             #
 #:: Email: josue.m.polanco@gmail.com                                 #
 ######################################################################
-#   Copyright (C) 2017 by Josué M. Polanco-Martínez 	             #
+#   Copyright (C) 2017-2026 by Josué M. Polanco-Martínez 	             #
 #   This file/code is part of the R package BINCOR 	             #
 ######################################################################
 #								     
@@ -53,18 +53,27 @@ function(bints1, bints2, varnamets1="NULL", varnamets2="NULL", KoCM, rmltrd="N",
   round(cor.ts$p.value, 15), sep=""), "\n")
 
  if (device=="png") {
-  fileout <- paste("scatterplot_", ofilename, ".png", sep="")
+  fileout <- file.path(
+    tempdir(),
+    paste0("scatterplot_", ofilename, ".png")
+  )
   png(fileout, height=Hfig, width=Wfig, res=resfig) 
  }
 
  if (device=="jpeg" || device=="jpg") {
-  fileout <- paste("scaterplot_", ofilename, ".jpg", sep="")
+  fileout <- file.path(
+    tempdir(),
+    paste0("scaterplot_", ofilename, ".jpg")
+  )
   jpeg(fileout, height=Hfig, width=Wfig, res=resfig)
  }
 
- if (device=="pdf") {
-  fileout <- paste("scaterplot_", ofilename, ".pdf", sep="")
-  pdf(fileout, height=Hpdf, width=Wpdf)
+ if (device == "pdf") {
+  fileout <- file.path(
+    tempdir(),
+    paste0("scaterplot_", ofilename, ".pdf")
+  )
+  pdf(fileout, height = Hpdf, width = Wpdf)
  }
   
  plot(bints1[,2], bints2[,2], t="p", xlab=varnamets1, 

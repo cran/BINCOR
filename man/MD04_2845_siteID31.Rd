@@ -23,14 +23,15 @@ Responses). The paleoclimate time series come from the site MD04-2845 and contai
 Sánchez Goñi, M. F., Landais, A., Fletcher, W. J., Naughton, F., Desprat, S.,
 Duprat, J. (2008). Contrasting impacts of Dansgaard-Oeschger events over
 a western European latitudinal transect modulated by orbital parameters.
-Quaternary Science Reviews 27 (11), 1136--1151. \cr
+Quaternary Science Reviews, \strong{27(11)}, 1136-1151. 
+<URL: \doi{10.1016/j.quascirev.2008.03.003}>. \cr
 
 Sánchez Goñi, M. F., Desprat, S., Daniau, A.L., Bassinot, F. C., 
-Polanco Martínez, J. M., Harrison, S. P., Allen, J. R., Anderson, R. S., Behling,
-H., Bonnefille, R., et al. (2017). The ACER pollen and charcoal database: a
-global resource to document vegetation and fire response to abrupt climate
-changes during the last glacial period. Earth System Science Data 9 (2), 679. \cr
-URL \url{https://www.earth-syst-sci-data.net/9/679/2017/}. 
+\strong{Polanco Martínez, J. M.}, Harrison, S. P., Allen, J. R., Anderson, 
+R. S., Behling, H., Bonnefille, R., et al. (2017). The ACER pollen and charcoal 
+database: a global resource to document vegetation and fire response to abrupt 
+climate changes during the last glacial period. Earth System Science Data, 
+\strong{9(2)}, 679-695. <URL: \doi{10.5194/essd-9-679-2017}>. 
 }
 \keyword{dataset2}
 

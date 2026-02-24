@@ -27,10 +27,10 @@ The output filename (ASCII format) containing the binned time series.
 }
 \details{
 The \code{\link{bin_cor}} function convert an irregular times series to 
-a binned time series and depends on the \R \emph{dplR} package to carry 
+a binned (regular) time series and depends on the \R \emph{dplR} package to carry 
 out this task. \emph{dplR} (\emph{redfitTauest} function) estimate the 
 persistence contained in the irregular climate time series by means of 
-the method of Mudelsee (2002). 
+the method proposed by Mudelsee (2002). 
 }
 \note{
 Needs \emph{dplR} (\emph{redfitTauest} function) to estimate the 
@@ -58,16 +58,22 @@ A list of 16 elements:
  \item{\% of VAR. lost ts1}{Percentage of variance lost for ts1.}
  \item{\% of VAR. lost ts2}{Percentage of variance lost for ts2.}
 }
+\author{
+Josué M. Polanco-Martínez (a.k.a. jomopo).\cr
+Dept. of Statistics, Fac. of Sciences, Unversity of Salamanca, SPAIN.\cr 
+Web1: \url{https://scholar.google.es/citations?user=8djLIhcAAAAJ&hl=en}.\cr
+Web2: \url{https://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
+Email: \email{josue.m.polanco@gmail.com} 
+}
 \references{
 Bunn, A., Korpela, M., Biondi, F., Campelo, F., Mérian, P., Qeadan, F.,
 Zang, C., Buras, A., Cecile, J., Mudelsee, M., Schulz, M. (2015). 
 Dendrochronology Program Library in R. R package version 1.6.3.
-URL \url{https://CRAN.R-project.org/package=dplR}. \cr 
+<URL: \url{https://CRAN.R-project.org/package=dplR}>. \cr 
 
 Mudelsee, M. (2002). TAUEST: A computer program for estimating persistence 
-in unevenly spaced weather/climate time series. Computers & Geosciences 28 
-(1), 69--72. \cr
-URL \url{http://www.climate-risk-analysis.com/software/}. \cr
+in unevenly spaced weather/climate time series. Computers & Geosciences, 
+\strong{28(1)}, 69--72. <URL: \doi{https://doi.org/10.1016/S0098-3004(01)00041-3}>.\cr
 
 Mudelsee, M. (2010). Climate Time Series Analysis: Classical Statistical and
 Bootstrap Methods. Springer. \cr
@@ -75,21 +81,15 @@ Bootstrap Methods. Springer. \cr
 Mudelsee, M. (2014). Climate Time Series Analysis: Classical Statistical and
 Bootstrap Methods, Second Edition. Springer. \cr 
 
-Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
-M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced time series. Ms. under review (second round).
-}
-\author{
-Josué M. Polanco-Martínez (a.k.a. jomopo).\cr
-BC3 - Basque Centre for Climate Change, Bilbao, SPAIN.\cr 
-EPOC UMR CNRS 5805 - U. de Bordeaux, Pessac, FRANCE.\cr
-Web1: \url{https://scholar.google.es/citations?user=8djLIhcAAAAJ&hl=en}.\cr
-Web2: \url{http://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
-Email: \url{josue.m.polanco@gmail.com} 
+\strong{Polanco-Martínez, J.M.}, Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
+M. Mudelsee. (2019). BINCOR: an R package to estimate the correlation 
+between two unevenly spaced time series. \emph{R Journal}, \strong{11(1)}, 
+170-184, <URL: \doi{doi:10.32614/RJ-2019-035}>.
 }
 \examples{
+\donttest{
  #####################################################################
- #::  Figure 1 D (Polanco-Martínez et al. (2018), (mimeo)). 
+ #::  Figure 1 D (Polanco-Martínez et al. (2019) (mimeo)). 
  #####################################################################
  library("BINCOR") 
 
@@ -104,6 +104,7 @@ Email: \url{josue.m.polanco@gmail.com}
  #####################################################################
  bincor.tmp    <- bin_cor(ENSO.dat, NHSST.dat, FLAGTAU=3, "output_ENSO_NHSST.tmp")
  binnedts      <- bincor.tmp$Binned_time_series
+}
 }
 \keyword{bincor}
 \keyword{Binned correlation}

@@ -3,7 +3,7 @@
 #:: Programmed by Josué M. Polanco-Martinez a.k.a jomopo             #
 #:: Email: josue.m.polanco@gmail.com                                 #
 ######################################################################
-#   Copyright (C) 2017 by Josué M. Polanco-Martínez 	             #
+#   Copyright (C) 2017-2026 by Josué M. Polanco-Martínez 	             #
 #   This file/code is part of the R package BINCOR 	             #
 ######################################################################
 #								     
@@ -45,17 +45,26 @@ function(ts1, ts2, bints1, bints2, varnamets1="", varnamets2="",
 
  #:: Devices options: png, jpg & pdf 
  if (device=="png") {
-  fileout <- paste("plot_", ofilename, "%02d.png", sep="")
+  fileout <- file.path(
+    tempdir(),
+    paste0("plot_", ofilename, "%02d.png")
+  )
   png(fileout, height=Hfig, width=Wfig, res=resfig) 
  }
 
  if (device=="jpeg" || device=="jpg") {
-  fileout <- paste("plot_", ofilename, "%02d.jpg", sep="")
+  fileout <- file.path(
+    tempdir(),
+    paste0("plot_", ofilename, "%02d.jpg")
+  )
   jpeg(fileout, height=Hfig, width=Wfig, res=resfig)
  }
 
  if (device=="pdf") {
-  fileout <- paste("plot_", ofilename, ".pdf", sep="")
+  fileout <- file.path(
+    tempdir(),
+    paste0("plot_", ofilename, ".pdf")
+  )
   pdf(fileout, height=Hpdf, width=Wpdf)
  }
 

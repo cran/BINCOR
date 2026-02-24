@@ -70,22 +70,23 @@ Output: an object of the form \emph{ccf} containing the correlation
 coefficients for the defined number of lags (lagmax) and the statistical 
 significance. 
 }
-\references{
-Polanco-Martínez, J.M., Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
-M. Mudelsee. (2018). BINCOR: an R package to estimate the correlation 
-between two unevenly spaced time series. Ms. under review (second round). 
-}
 \author{
 Josué M. Polanco-Martínez (a.k.a. jomopo).\cr
-BC3 - Basque Centre for Climate Change, Bilbao, SPAIN.\cr 
-EPOC UMR CNRS 5805 - U. de Bordeaux, Pessac, FRANCE.\cr
+Dept. of Statistics, Fac. of Sciences, Unversity of Salamanca, SPAIN.\cr 
 Web1: \url{https://scholar.google.es/citations?user=8djLIhcAAAAJ&hl=en}.\cr
-Web2: \url{http://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
-Email: \url{josue.m.polanco@gmail.com} 
+Web2: \url{https://www.researchgate.net/profile/Josue_Polanco-Martinez}.\cr
+Email: \email{josue.m.polanco@gmail.com} 
+}
+\references{
+\strong{Polanco-Martínez, J.M.}, Medina-Elizalde, M.A., Sánchez Goñi, M.F., 
+M. Mudelsee. (2019). BINCOR: an R package to estimate the correlation 
+between two unevenly spaced time series. \emph{R Journal}, \strong{11(1)}, 
+170-184, <URL: \doi{doi:10.32614/RJ-2019-035}>. 
 }
 \examples{
+\donttest{
  #####################################################################
- #::  Figure 5 (Polanco-Martínez et al. (2018), (mimeo)). 
+ #::  Figure 5 (Polanco-Martínez et al. (2019) (mimeo)). 
  #####################################################################
  library("BINCOR") 
  library("pracma")
@@ -119,6 +120,7 @@ Email: \url{josue.m.polanco@gmail.com}
  # JPG format 
  ccf_ts(bin_ts1, bin_ts2, RedL=TRUE, rmltrd="y", device="jpg", 
   Hfig=900, Wfig=1200, resfig=150, ofilename="ccf_ID31_ID32_res")
+}
 }
 \keyword{cor_ts}
 \keyword{Bi-variate correlation}

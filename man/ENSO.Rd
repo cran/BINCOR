@@ -18,7 +18,7 @@ The data sets can be obtained from the following URL \url{http://www.meteo.psu.e
 Mann, M. E., Zhang, Z., Rutherford, S., Bradley, R. S., Hughes, M. K.,
 Shindell, D., Ammann, C., Faluvegi, G., Ni, F. (2009). Global signatures
 and dynamical origins of the Little Ice Age and Medieval Climate Anomaly.
-Science 326 (5957), 1256–1260.
+Science, \strong{326(5957)}, 1256-1260. <URL: \doi{10.1126/science.1177303}>. 
 }
 \keyword{dataset2}
 

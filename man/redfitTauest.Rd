@@ -33,18 +33,17 @@ code \emph{tauest_dplR.R} in the directory \R of our BINCOR package.
 \references{
 Bunn, A., Korpela, M., Biondi, F., Campelo, F., Mérian, P., Qeadan, F.,
 Zang, C., Buras, A., Cecile, J., Mudelsee, M., Schulz, M. (2015). 
-Dendrochronology Program Library in R. R package version 1.6.3.
-URL \url{https://CRAN.R-project.org/package=dplR}. \cr 
+\emph{Dendrochronology Program Library in R}, R package version 1.6.3,
+The Comprehensive R Archive Network (CRAN),
+<URL: \url{https://CRAN.R-project.org/package=dplR}>. \cr 
 
 Mudelsee, M. (2002). TAUEST: A computer program for estimating persistence 
-in unevenly spaced weather/climate time series. Computers & Geosciences 28 
-(1), 69--72. \cr
-URL \url{http://www.climate-risk-analysis.com/software/}. \cr
+in unevenly spaced weather/climate time series. Computers & Geosciences, 
+\strong{28(1)}, 69--72. <URL: \doi{https://doi.org/10.1016/S0098-3004(01)00041-3}>.\cr
 
 Schulz, M., Mudelsee M. (2002). REDFIT: estimating red-noise spectra directly 
-from unevenly spaced paleoclimatic time series. Computers & Geosciences 28(3), 
-421--426. \cr
-URL \url{https://www.marum.de/Michael-Schulz/Michael-Schulz-Software.html}. \cr
+from unevenly spaced paleoclimatic time series. Computers & Geosciences,
+\strong{28(3)}, 421--426. <URL: \doi{10.1016/S0098-3004(01)00044-9}>.\cr
 
 Mudelsee, M. (2010). Climate Time Series Analysis: Classical Statistical and
 Bootstrap Methods. Springer. \cr
@@ -53,10 +52,10 @@ Mudelsee, M. (2014). Climate Time Series Analysis: Classical Statistical and
 Bootstrap Methods, Second Edition. Springer. \cr 
 }
 \author{
-Mikko Korpela .\cr
+Mikko Korpela.\cr
 2013-2015 Aalto University, FINLAND.\cr 
 Web: \url{https://github.com/mvkorpel}.\cr
-Email: \url{mvkorpel@iki.fi} 
+Email: \email{mvkorpel@iki.fi} 
 }
 \keyword{Tauest}
 \keyword{Memory}

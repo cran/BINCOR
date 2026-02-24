@@ -19,16 +19,18 @@ elements (Roucoux et al., 2005; Sánchez Goñi et al., 2017).
 variables (time and pollen percentages). 
 }
 \source{\url{https://doi.pangaea.de/10.1594/PANGAEA.870867} \cr
+
 Roucoux, K., De Abreu, L., Shackleton, N., Tzedakis, P. (2005). The response
 of NW Iberian vegetation to North Atlantic climate oscillations during the
-last 65 kyr. Quaternary Science Reviews 24 (14), 1637--1653. \cr
+last 65 kyr. Quaternary Science Reviews, \strong{24(14)}, 1637-1653. 
+<URL: \doi{10.1016/j.quascirev.2004.08.022}>. \cr
 
 Sánchez Goñi, M. F., Desprat, S., Daniau, A.L., Bassinot, F. C., 
-Polanco Martínez, J. M., Harrison, S. P., Allen, J. R., Anderson, R. S., Behling,
-H., Bonnefille, R., et al. (2017). The ACER pollen and charcoal database: a
-global resource to document vegetation and fire response to abrupt climate
-changes during the last glacial period. Earth System Science Data 9 (2), 679. \cr
-URL \url{https://www.earth-syst-sci-data.net/9/679/2017/}. 
+\strong{Polanco Martínez, J. M.}, Harrison, S. P., Allen, J. R., Anderson, 
+R. S., Behling, H., Bonnefille, R., et al. (2017). The ACER pollen and charcoal 
+database: a global resource to document vegetation and fire response to abrupt 
+climate changes during the last glacial period. Earth System Science Data, 
+\strong{9(2)}, 679-695. <URL: \doi{10.5194/essd-9-679-2017}>. 
 }
 \keyword{dataset2}
 

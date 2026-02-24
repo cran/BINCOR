@@ -17,8 +17,8 @@ al., 2006). The data sets can be obtained from the following URL \url{http://www
 
 Brohan, P., Kennedy, J. J., Harris, I., Tett, S. F., Jones, P. D. (2006). 
 Uncertainty estimates in regional and global observed temperature changes: 
-A new data set from 1850. Journal of Geophysical Research: Atmospheres
-111 (D12). 
+A new data set from 1850. Journal of Geophysical Research: Atmospheres, 
+\strong{111(D12)}.  <URL: \doi{https://doi.org/10.1029/2005JD006548}>.  
 }
 \keyword{dataset1}
 
